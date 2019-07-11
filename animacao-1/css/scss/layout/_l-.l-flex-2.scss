@@ -1,0 +1,7 @@
+$layout-name: 'l-flex-2';
+
+.#{$layout-name} {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
