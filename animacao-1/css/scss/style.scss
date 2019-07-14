@@ -1,10 +1,12 @@
 // base
 @import './base/reset';
 
-// layout
-@import './layout/l-.l-flex-1';
-@import './layout/l-.l-flex-2';
-
-
 // principal
-@import './anim1';
+@import './titleAnim';
+@import './imageAnim';
+
+// font
+@font-face {
+  font-family: Brushield;
+  src: url('../../font/Brushield.ttf');
+}

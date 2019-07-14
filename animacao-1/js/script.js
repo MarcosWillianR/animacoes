@@ -1,3 +1,3 @@
-import teste from './modules/teste.js';
+import loadingScreen from './modules/loadingScreen.js';
 
-teste();
+loadingScreen();
