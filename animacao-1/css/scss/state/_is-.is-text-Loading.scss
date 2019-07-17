@@ -1,0 +1,41 @@
+[data-text-container] {
+  .anim__title {
+    font-family: Brushield;
+    font-size: 8rem;
+    line-height: 8rem;
+    text-align: center;
+    color: #FFF;
+    cursor: default;
+    &.off [data-anim="names"]{
+      position: relative;
+      animation: textAnimOff 2s forwards;
+    }
+    [data-anim="names"]:nth-child(1) {
+      animation-delay: .3s;
+    }
+    [data-anim="names"]:nth-child(2) {
+      animation-delay: .4s;
+    }
+    [data-anim="names"]:nth-child(3) {
+      animation-delay: .5s;
+    }
+    [data-anim="names"]:nth-child(4) {
+      animation-delay: .6s;
+    }
+  }
+}
+
+@keyframes textAnimOff {
+  0%, 25% {
+    top: 0;
+  }
+  50% {
+    top: -350px;
+  }
+  75% {
+    top: -150px;
+  }
+  100% {
+    top: -850px;
+  }
+}

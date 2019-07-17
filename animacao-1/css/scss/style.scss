@@ -1,9 +1,13 @@
 // base
 @import './base/reset';
 
-// principal
+
+// 
 @import './titleAnim';
-@import './imageAnim';
+
+// state
+@import './state/is-.is-loading';
+@import './state/is-.is-text-Loading';
 
 // font
 @font-face {
