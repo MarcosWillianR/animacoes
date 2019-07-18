@@ -23,7 +23,7 @@ export default class Loading {
     <span class="anim__circle" data-anim="loading"></span>
     `;
 
-    this.criarAnimacao(this.divLoading);
+    // this.criarAnimacao(this.divLoading);
 
     return this.divLoading;
   }

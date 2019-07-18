@@ -6,9 +6,8 @@
     text-align: center;
     color: #FFF;
     cursor: default;
-    &.off [data-anim="names"]{
-      position: relative;
-      animation: textAnimOff 2s forwards;
+    [data-anim="names"].anim {
+      animation: opacity 3s linear forwards;
     }
     [data-anim="names"]:nth-child(1) {
       animation-delay: .3s;
@@ -25,17 +24,18 @@
   }
 }
 
-@keyframes textAnimOff {
-  0%, 25% {
-    top: 0;
+
+@keyframes opacity {
+  25% {
+    opacity: 1;
   }
   50% {
-    top: -350px;
+    opacity: .8;
   }
   75% {
-    top: -150px;
+    opacity: .4;
   }
   100% {
-    top: -850px;
+    opacity: 0;
   }
 }
