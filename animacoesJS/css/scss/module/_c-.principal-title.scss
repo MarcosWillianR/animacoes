@@ -1,0 +1,39 @@
+$module-name: 'principal-title';
+
+.#{$module-name} {
+  font-family: 'PT Sans';
+  font-weight: 700;
+  font-size: 9em;
+  text-transform: uppercase;
+  color: #000;
+  @include device(small) {
+    font-size: 4.5em;
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 185px;
+    height: 8px;
+    background: currentColor;
+    margin-left: 5px;
+    margin-bottom: -20px;
+    @include device(small) {
+      width: 92.5px;
+      margin-bottom: -10px;
+    }
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 185px;
+    height: 8px;
+    background: currentColor;
+    margin-left: 240px;
+    margin-top: -20px;
+    @include device(small) {
+      width: 92.5px;
+      margin-left: 120px;
+      margin-top: -10px;
+    }
+  }
+}

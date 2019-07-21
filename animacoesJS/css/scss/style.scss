@@ -1,8 +1,13 @@
 // base
 @import './base/reset';
 
-// font
-@font-face {
-  font-family: Brushield;
-  src: url('../../font/Brushield.ttf');
-}
+// svg css
+@import './svg-style';
+
+// media queries
+@import './media-querie';
+
+// Modules
+@import './module/c-.main-content';
+@import './module/c-.principal-title';
+@import './module/c-.scroll-container';

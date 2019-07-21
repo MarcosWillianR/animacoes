@@ -1,0 +1,26 @@
+$module-name: 'main-content';
+
+.#{$module-name} {
+  position: relative;
+  background: url('../../../img/husky-photos/husky-4.jpg') no-repeat center center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 10px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  & > p {
+    font-family: 'Playfair Display SC';
+    font-weight: 400;
+    font-size: 1.75em;
+    line-height: 1.4em;
+    max-width: 1200px;
+    text-align: center;
+
+    margin-top: 20px;
+  }
+}
