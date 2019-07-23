@@ -3,66 +3,22 @@ $module-name: 'scroll-container';
 .#{$module-name} {
   position: absolute;
   cursor: pointer;
-  bottom: 50px;
-  padding: 50px;
-  @include device(small) {
-    bottom: 0;
-    padding: 25px;
-  }
-  .scroll-arrow {
-    position: relative;
-    &:before {
-      content: '';
-      position: absolute;
-      left: -14.8px;
-      display: inline-block;
-      width: 70px;
-      height: 8px;
-      background: #000;
-      transform: rotate(130deg);
-      @include device(small) {
-        width: 35px;
-        height: 4px;
-        left: -7.4px;
-      }
-    }
-    &:after {
-      content: '';
-      position: absolute;
-      right: -14.8px;
-      display: inline-block;
-      width: 70px;
-      height: 8px;
-      background: #000;
-      transform: rotate(50deg);
-      @include device(small) {
-        width: 35px;
-        height: 4px;
-        right: -7.4px;
-      }
-    }
-    &:before, &:after {
-      animation: scroll-down 3.5s ease-in-out infinite;
-    }
-    &:nth-child(1):before, &:nth-child(1):after {
-      animation-delay: 1s;
-    }
-    &:nth-child(2):before, &:nth-child(2):after {
-      animation-delay: 2s;
-    }
-    &:nth-child(3):before, &:nth-child(3):after {
-      animation-delay: 3s;
-    }
+  bottom: 60px;
+  animation: scroll-anim 2s ease infinite alternate;
+  img {
+    width: 50px;
+    height: 50px;
   }
 }
 
-@keyframes scroll-down {
-  0% {
-    opacity: 1;
-    top: -30px;
+@keyframes scroll-anim {
+  50% {
+    bottom: 60px;
+  }
+  75% {
+    bottom: 30px;
   }
   100% {
-    opacity: 0;
-    top: 0;
+    bottom: 60px;
   }
 }
