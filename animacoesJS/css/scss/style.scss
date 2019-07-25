@@ -3,8 +3,11 @@
 
 // media queries
 @import './media-querie';
+// flex grid
+@import './flex-grid';
 
 // Modules
-@import './module/c-.main-content';
-@import './module/c-.principal-title';
-@import './module/c-.scroll-container';
+@import './module/c-.main';
+@import './module/c-.main__title';
+@import './module/c-.header';
+@import './module/c-.historia';

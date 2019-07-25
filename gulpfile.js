@@ -7,7 +7,7 @@ const browserSync = require('browser-sync').create();
 // Função para compilar o SASS e adicionar os prefixos
 function compilaSass() {
   return gulp.src('animacoesJS/css/scss/**/*.scss')
-    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sass())
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 2 versions'],
       cascade: false

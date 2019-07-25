@@ -1,0 +1,25 @@
+$module-name: 'header';
+
+.#{$module-name} {
+  position: absolute;
+  z-index: 3000;
+  background: transparent;
+  padding-left: 120px;
+  padding-top: 40px;
+  @include device(small) {
+    .nav__header {
+      display: none;
+    }
+  }
+  .nav__header > ul {
+    display: flex;
+    a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: normal;
+      font-size: 1.125em;
+      color: #000;
+      padding: 10px 20px 10px 0;
+      margin-right: 10px;
+    }
+  }
+}

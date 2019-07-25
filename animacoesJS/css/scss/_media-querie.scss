@@ -1,19 +1,26 @@
+$large-device: 1200px;
 $medium-device: 960px;
-$small-device: 730px;
+$small-device: 768px;
+$xsmall-device: 580px;
 
 @mixin device($size) {
   @if $size == large {
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: #{$medium-device}) and (max-width: #{$large-device}) {
       @content;
     }
   }
   @else if $size == medium {
-    @media screen and (min-width: 730px) and (max-width: 960px - 1) {
+    @media screen and (min-width: #{$small-device}) and (max-width: #{$medium-device - 1}) {
       @content;
     }
   }
   @else if $size == small {
-    @media screen and (max-width: 730px - 1) {
+    @media screen and (max-width: #{$small-device - 1}) {
+      @content;
+    }
+  }
+  @else if $size == xsmall {
+    @media screen and (max-width: #{$xsmall-device}) {
       @content;
     }
   }

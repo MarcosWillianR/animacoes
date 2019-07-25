@@ -6,26 +6,39 @@
   <meta name="author" content="Marcos Willian">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:700|Playfair+Display+SC:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display+SC:400,700&display=swap" rel="stylesheet">
   <title>AnimaçõesJS - Um compilado de animações feitas com CSS3 & JS</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+  <header class="header">
+    <nav class="nav__header">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">História</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <main class="main-content">
-    <h1 class="principal-title">Husky</h1>
-    <p>À primeira vista, sua cara de lobo e seu porte podem ser intimidadores.<br />Mas, na verdade, o husky siberiano é amigável, gentil e sociável</p>
-
-    <div class="scroll-container">
-      <img src="./img/angle-double-down-solid.svg">
-    </div>
+  <main class="main">
+    <h1 class="main__title">Husky</h1>
+    <p class="main__text">À primeira vista, sua cara de lobo e seu porte podem ser intimidadores.</p>
+    <p class="main__text">Mas, na verdade, o husky siberiano é amigável, gentil e sociável</p>
   </main>
 
-  <!-- Conteúdo da animação
-  <h1 style="font-family: 'PT Sans'; font-weight: 700;">Fonte de Titulo</h1>
-  <h2 style="font-family: 'Playfair Display SC'; font-weight: 400;">Fonte de textos</h2>
-  <h2 style="font-family: 'Playfair Display SC'; font-weight: 700;">Fonte de textos em negrito</h2> -->
+
+  <section class="historia">
+    <h1>História</h1>
+    <article class="historia__article">
+      <div class="flex-6">
+        <img src="./img/husky-photos/husky-5.jpg" alt="Husky 5">
+      </div>
+      <p class="flex-6">O povo Chukchi do nordeste da Ásia desenvolveu a raça hoje conhecida como Husky Siberiano. Sua origem é desconhecida, mas ele é obviamente do grupo spitz, que evoluiu por centenas de anos como um cão de trenó para esses povos nômades. Durante a corrida do ouro no Alasca, os cães se tornaram parte vital da vida nas regiões do Ártico, e as corridas de cães eram o entretenimento preferido.</p>
+    </article>
+  </section>
 
 
   <script type="module" src="./js/script.js"></script>

@@ -1,39 +1,39 @@
-$module-name: 'principal-title';
+$module-name: 'main__title';
 
 .#{$module-name} {
-  font-family: 'PT Sans';
-  font-weight: 700;
+  font-family: 'Playfair Display SC';
+  font-weight: normal;
   font-size: 9em;
-  text-transform: uppercase;
   color: #000;
   @include device(small) {
-    font-size: 4.5em;
+    font-size: 3em;
   }
   &:before {
     content: '';
     display: block;
     width: 185px;
-    height: 8px;
+    height: 4px;
     background: currentColor;
     margin-left: 5px;
     margin-bottom: -20px;
     @include device(small) {
-      width: 92.5px;
-      margin-bottom: -10px;
+      width: 65px;
+      height: 2px;
+      margin-left: 1px;
+      margin-bottom: -5px;
     }
   }
   &:after {
     content: '';
     display: block;
-    width: 185px;
-    height: 8px;
+    width: 255px;
+    height: 4px;
     background: currentColor;
-    margin-left: 240px;
-    margin-top: -20px;
+    margin-left: 215px;
     @include device(small) {
-      width: 92.5px;
-      margin-left: 120px;
-      margin-top: -10px;
+      width: 85px;
+      height: 2px;
+      margin-left: 70px;
     }
   }
 }
