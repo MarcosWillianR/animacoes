@@ -7,7 +7,5 @@
 @import './flex-grid';
 
 // Modules
-@import './module/c-.main';
-@import './module/c-.main__title';
-@import './module/c-.header';
-@import './module/c-.historia';
+@import './module/header/c-.header';
+@import './module/header/c-.nav-mobile__header';

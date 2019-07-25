@@ -1,5 +1,5 @@
 export default function menuMobile() {
-  const header = document.querySelector('[data-mobile="header"]');
+  const header = document.querySelector('[data-mobile="container"]');
   const button = document.querySelector('[data-mobile="button"]');
   const content = document.querySelector('[data-mobile="content"]');
 
