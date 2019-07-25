@@ -6,13 +6,13 @@ const browserSync = require('browser-sync').create();
 
 // Função para compilar o SASS e adicionar os prefixos
 function compilaSass() {
-  return gulp.src('animacoesJS/css/scss/**/*.scss')
+  return gulp.src('css/scss/**/*.scss')
     .pipe(sass())
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest('animacoesJS/css/'))
+    .pipe(gulp.dest('css/'))
     .pipe(browserSync.stream());
 }
 
@@ -24,7 +24,7 @@ gulp.task('sass', compilaSass);
 function browser() {
   browserSync.init({
     server: {
-      baseDir: "animacoesJS/"
+      baseDir: './',
     },
   });
 }
@@ -35,9 +35,9 @@ gulp.task('browser-sync', browser);
 
 // Função de watch do gulp
 function watch() {
-  gulp.watch(['animacoesJS/css/scss/**/*.scss'], compilaSass);
-  gulp.watch(['animacoesJS/js/**/*.js']).on('change', browserSync.reload);
-  gulp.watch(['animacoesJS/index.html']).on('change', browserSync.reload);
+  gulp.watch(['css/scss/**/*.scss'], compilaSass);
+  gulp.watch(['js/**/*.js']).on('change', browserSync.reload);
+  gulp.watch(['index.html']).on('change', browserSync.reload);
 }
 
 // Inicia a tarefa de watch
