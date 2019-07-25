@@ -7,6 +7,13 @@ $module-name: 'header';
   padding-left: 120px;
   padding-top: 40px;
   @include device(small) {
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    &.is-active {
+      background: rgba(0,0,0,.8);
+      position: fixed;
+    }
     .nav__header {
       display: none;
     }
@@ -21,5 +28,116 @@ $module-name: 'header';
       padding: 10px 20px 10px 0;
       margin-right: 10px;
     }
+  }
+  // Mobile Navigation
+  .nav__mobile {
+    display: none;
+    @include device(small) {
+      display: block;
+    }
+    & > button {
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border: 0;
+      background: 0;
+      border-top: 3px solid #000;
+      overflow: hidden;
+      color: transparent;
+      position: relative;
+        z-index: 1000;
+      &.is-active {
+        border: 0;
+        &:before, &:after {
+          background: #FFF;
+        }
+      }
+      &:before, &:after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: #000;
+        position: relative;
+      }
+      &:before {
+        animation: menu-before 1s forwards;
+      }
+      &:after {
+        animation: menu-after 1s forwards;
+        top: -6px;
+      }
+      &.is-active:before {
+        animation: toggle-menu-before 1s forwards;
+      }
+      &.is-active:after {
+        animation: toggle-menu-after 1s forwards;
+      }
+    }
+    & ul {
+      display: none;
+      &.is-active {
+        display: block;
+      }
+      a {
+        font-size: 1.125em;
+        font-family: 'IBM Plex Mono', monospace;
+        color: #FFF;
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+        padding: 20px;
+        border-bottom: 1px solid #FFF;
+        transition: margin-left .325s linear, margin-right .325s linear;
+        &:hover {
+          margin-left: 150px;
+          margin-right: 150px;
+          @include device(xsmall) {
+            margin-left: 50px;
+            margin-right: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes menu-before {
+  0% {
+    transform: rotate(136deg);
+    right: -1px;
+    top: 3px;
+  }
+  100% {
+    transform: rotate(0);
+    right: 0;
+    top: 0;
+  }
+}
+@keyframes menu-after {
+  0% {
+    transform: rotate(42deg);
+    top: -15px;
+    left: 1px;
+  }
+  100% {
+    transform: rotate(0);
+    right: 0;
+    top: -6px;
+  }
+}
+@keyframes toggle-menu-before {
+  100% {
+    transform: rotate(136deg);
+    right: -1px;
+    top: 3px;
+  }
+}
+@keyframes toggle-menu-after {
+  100% {
+    transform: rotate(42deg);
+    top: -15px;
+    left: 1px;
   }
 }

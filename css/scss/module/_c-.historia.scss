@@ -15,9 +15,6 @@ $module-name: 'historia';
   @include device(small) {
     padding: 0 10px;
   }
-  @include device(xsmall) {
-    padding: 0 10px;
-  }
   h1 {
     margin: 60px 0px;
     text-align: center;

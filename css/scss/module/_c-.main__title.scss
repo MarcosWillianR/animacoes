@@ -5,23 +5,9 @@ $module-name: 'main__title';
   font-weight: normal;
   font-size: 9em;
   color: #000;
+  line-height: 1em;
   @include device(small) {
     font-size: 3em;
-  }
-  &:before {
-    content: '';
-    display: block;
-    width: 185px;
-    height: 4px;
-    background: currentColor;
-    margin-left: 5px;
-    margin-bottom: -20px;
-    @include device(small) {
-      width: 65px;
-      height: 2px;
-      margin-left: 1px;
-      margin-bottom: -5px;
-    }
   }
   &:after {
     content: '';
@@ -29,11 +15,12 @@ $module-name: 'main__title';
     width: 255px;
     height: 4px;
     background: currentColor;
-    margin-left: 215px;
+    margin: 0 auto;
+    margin-top: 20px;
     @include device(small) {
       width: 85px;
       height: 2px;
-      margin-left: 70px;
+      margin-top: 10px;
     }
   }
 }
