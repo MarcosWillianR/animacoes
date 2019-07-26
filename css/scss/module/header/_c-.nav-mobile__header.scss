@@ -6,11 +6,24 @@ $module-name: 'nav-mobile__header';
     display: block;
     &.is-active {
       position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
       background: rgba(0,0,0,.9);
       min-width: 100vw;
       min-height: 100vh;
-      margin: -10px;
-      padding: 10px;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 40px;
+      transition: padding .6s;
+    }
+  }
+  @include device(xsmall) {
+    &.is-active {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
     }
   }
   & > button {
@@ -66,19 +79,9 @@ $module-name: 'nav-mobile__header';
       margin: 10px 0;
       padding: 20px;
       border-bottom: 1px solid #FFF;
-      transition: margin-left .325s linear, margin-right .325s linear;
-      &:hover {
-        margin-left: 150px;
-        margin-right: 150px;
-        @include device(xsmall) {
-          margin-left: 50px;
-          margin-right: 50px;
-        }
-      }
     }
   }
 }
-
 
 @keyframes menu-before {
   0% {
