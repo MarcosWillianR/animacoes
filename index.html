@@ -14,7 +14,7 @@
 
 <body>
   <header class="header">
-    <nav class="nav__header">
+    <nav class="nav__header" aria-label="menu">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">História</a></li>
@@ -22,9 +22,9 @@
         <li><a href="#">Contato</a></li>
       </ul>
     </nav>
-    <nav class="nav-mobile__header" data-mobile="container">
-      <button data-mobile="button">Menu</button>
-      <ul data-mobile="content">
+    <nav class="nav-mobile__header" data-mobile="container" aria-label="menu mobile">
+      <button data-mobile="button" aria-expanded="false" aria-label="open menu mobile" aria-controls="menu">Menu</button>
+      <ul data-mobile="content" id="menu">
         <li><a href="#">Home</a></li>
         <li><a href="#">História</a></li>
         <li><a href="#">Sobre</a></li>
