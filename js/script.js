@@ -1,3 +1,4 @@
-import menuMobile from './modules/menuMobile.js';
+import ModalMenu from './modules/ModalMenu.js';
 
-menuMobile();
+const modalMenu = new ModalMenu('[data-mobile="container"]', '[data-mobile="button"]', '[data-mobile="content"]');
+modalMenu.init();
