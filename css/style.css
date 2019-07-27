@@ -180,6 +180,9 @@ img {
       padding: 10px 20px 10px 0;
       margin-right: 10px; }
 
+body {
+  height: 2000px; }
+
 .nav-mobile__header {
   display: none; }
   @media screen and (max-width: 767px) {
@@ -191,6 +194,7 @@ img {
         left: 0;
         bottom: 0;
         right: 0;
+        z-index: 3000;
         background: rgba(0, 0, 0, 0.9);
         min-width: 100vw;
         min-height: 100vh;
