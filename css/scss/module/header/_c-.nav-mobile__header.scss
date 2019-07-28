@@ -1,9 +1,5 @@
 $module-name: 'nav-mobile__header';
 
-body {
-  height: 2000px;
-}
-
 .#{$module-name} {
   display: none;
   @include device(small) {
