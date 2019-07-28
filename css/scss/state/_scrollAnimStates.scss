@@ -1,0 +1,15 @@
+/////////////////////////
+$dataAttribute: 'data-anim';
+
+[#{$dataAttribute}] {
+  transition: transform 1.5s, opacity 2s;
+  transform: translate3d(-120px,0,0) scale(.8);
+  opacity: 0;
+}
+///////////////////////////
+$visibleClass: 'is-visible';
+
+.#{$visibleClass} {
+  opacity: 1;
+  transform: translate3d(0,0,0) scale(1);
+}

@@ -10,8 +10,7 @@
 body {
   -webkit-font-smoothing: antialiased;
   background: #000;
-  color: #FFF;
-  height: 2000px; }
+  color: #FFF; }
 
 img {
   display: block;
@@ -334,3 +333,17 @@ img {
     transform: rotate(42deg);
     top: -15px;
     left: 1px; } }
+
+[data-anim] {
+  -webkit-transition: opacity 2s, -webkit-transform 1.5s;
+  transition: opacity 2s, -webkit-transform 1.5s;
+  transition: transform 1.5s, opacity 2s;
+  transition: transform 1.5s, opacity 2s, -webkit-transform 1.5s;
+  -webkit-transform: translate3d(-120px, 0, 0) scale(0.8);
+  transform: translate3d(-120px, 0, 0) scale(0.8);
+  opacity: 0; }
+
+.is-visible {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0) scale(1); }
