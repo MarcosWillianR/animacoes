@@ -1,0 +1,102 @@
+$module-name: 'history';
+
+.#{$module-name} {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 60px auto 0 auto;
+  @include device(smartphone) {
+    margin: 20px auto 0 auto;
+  }
+  .history__title {
+    @include default_titleStyle(#FFF);
+    text-align: center;
+    margin-bottom: 60px;
+    @include device(smartphone) {
+      margin-bottom: 20px;
+    }
+  }
+  .history__flex-wrapper {
+    padding: 0 40px;
+    display: flex;
+    flex-wrap: wrap;
+    @include device(smartphone) {
+      padding: 0 10px;
+    }
+    .history__divImg-left, .history__divImg-right {
+      flex: 0 1 50%;
+      max-width: 50%;
+      align-self: flex-start;
+      @include device(smartphone) {
+        flex: 0 1 100%;
+        max-width: 100%;
+        margin: 0px !important;
+        img {
+          max-width: 70%;
+          margin: 0 auto;
+        }
+      }
+      img {
+        padding: 0 20px;
+      }
+    }
+    & .history__text-50:last-of-type, .history__divImg-right {
+      margin: 20px 0;
+    }
+    .history__text-50 {
+      flex: 0 1 50%;
+      max-width: 50%;
+      padding: 0 20px;
+      @include default_textStyle(#FFF);
+      @include device(smartphone) {
+        flex: 0 1 100%;
+        max-width: 100%;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+    }
+    .history__text-100 {
+      flex: 0 1 100%;
+      max-width: 100%;
+      padding: 0 20px;
+      @include default_textStyle(#FFF);
+      p {
+        margin: 20px 0;
+      }
+    }
+    @include device(smartphone) {
+      .history__divImg-left {
+        order: 0;
+      }
+      & .history__text-50:first-of-type {
+        order: 1;
+      }
+      .history__text-100 {
+        order: 2;
+      }
+      & .history__text-50:last-of-type {
+        order: 4;
+      }
+      .history__divImg-right {
+        order: 3;
+      }
+    }
+    .history__text-50, .history__text-100 {
+      @include device(desktopLarge) {
+        font-size: 1.125em;
+      }
+      @include device(tablet) {
+        font-size: 1.125em;
+      }
+      @include device(smartphone) {
+        padding: 0px;
+        margin: 10px 0 !important;
+        font-size: .875em;
+        p {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}

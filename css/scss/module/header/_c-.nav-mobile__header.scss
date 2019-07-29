@@ -2,7 +2,7 @@ $module-name: 'nav-mobile__header';
 
 .#{$module-name} {
   display: none;
-  @include device(small) {
+  @include device(smartphone) {
     display: block;
     &.is-active {
       position: fixed;
@@ -12,19 +12,9 @@ $module-name: 'nav-mobile__header';
         right: 0;
       z-index: 3000;
       background: rgba(0,0,0,.9);
-      min-width: 100vw;
+      min-width: 100%;
       min-height: 100vh;
-      padding-left: 40px;
-      padding-right: 40px;
-      padding-top: 40px;
-      transition: padding .6s;
-    }
-  }
-  @include device(xsmall) {
-    &.is-active {
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 10px;
+      padding: 10px;
     }
   }
   & > button {

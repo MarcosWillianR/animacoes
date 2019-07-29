@@ -1,8 +1,8 @@
 import debounce from './helper/debounce.js';
 
 export default class ScrollAnim {
-  constructor(elements) {
-    this.elements = document.querySelectorAll(elements);
+  constructor(...elements) {
+    this.elements = document.querySelectorAll(...elements);
 
     this.windowMetade = window.innerHeight * 0.6;
   }
@@ -22,10 +22,8 @@ export default class ScrollAnim {
       const { element } = elementDist;
 
       if (window.pageYOffset > elementDist.offsetTop) {
-        console.log('element Visible');
         element.classList.add('is-visible');
       } else {
-        console.log('element invisible');
         element.classList.remove('is-visible');
       }
     });
