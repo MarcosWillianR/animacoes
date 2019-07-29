@@ -1,46 +1,11 @@
-// base
-@import './base/reset';
-
 // media queries
 @import './media-querie';
 
+// base
+@import './base/reset';
 
-// Utilities
-@mixin defaultPadding {
-  padding-top: 40px;
-  @include device(desktopXLarge) {
-    padding-left: 120px;
-  }
-  @include device(desktopLarge) {
-    padding-left: 40px;
-  }
-  @include device(tablet) {
-    padding: 10px;
-  }
-  @include device(smartphone) {
-    padding: 10px;
-  }
-}
-@mixin default_titleStyle($color) {
-  font-family: 'Playfair Display SC';
-  font-weight: normal;
-  font-size: 9em;
-  color: $color;
-  line-height: 1em;
-  @include device(smartphone) {
-    font-size: 3em;
-    text-align: center;
-    align-self: center;
-  }
-}
-@mixin default_textStyle($color) {
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: normal;
-  font-size: 1.5em;
-  line-height: 1.4em;
-  color: $color;
-}
-///////////////////////////////////////////
+// utilities
+@import './u-utilities';
 
 // Modules
 @import './module/header/c-.header';              // Header

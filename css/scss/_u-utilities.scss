@@ -1,0 +1,53 @@
+// container styles
+@mixin section-container {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 60px auto 0 auto;
+  @include device(smartphone) {
+    margin: 20px auto 0 auto;
+  }
+}
+
+// default colors
+$color-default-1: #FFF;
+$color-default-2: #000;
+
+// Tipografia
+@mixin type-1($size, $color) {
+  @if $size == 9em {
+    font-family: 'Playfair Display SC', serif;
+    font-weight: normal;
+    line-height: 1em;
+    font-size: 9em;
+    color: $color;
+  }
+  @else if $size == 3em {
+    font-family: 'Playfair Display SC', serif;
+    font-weight: normal;
+    line-height: 1em;
+    font-size: 3em;
+    color: $color;
+  }
+  @else if $size == 1.5em {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: normal;
+    line-height: 1.4em;
+    font-size: 1.5em;
+    color: $color;
+  }
+  @else if $size == 1.125em {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: normal;
+    line-height: 1.4em;
+    font-size: 1.125em;
+    color: $color;
+  }
+  @else if $size == .875em {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: normal;
+    line-height: 1.4em;
+    font-size: .875em;
+    color: $color;
+  }
+}

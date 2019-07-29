@@ -19,7 +19,7 @@ $small-device: 768px;
     }
   }
   @else if $size == smartphone {
-    @media screen and (max-width: #{$small-device}) and (max-height: 900px) {
+    @media screen and (max-width: #{$small-device}) {
       @content;
     }
   }

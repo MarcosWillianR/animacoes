@@ -1,19 +1,16 @@
 $module-name: 'history';
 
 .#{$module-name} {
-  width: 100%;
-  max-width: 1280px;
-  min-height: 100vh;
-  margin: 60px auto 0 auto;
-  @include device(smartphone) {
-    margin: 20px auto 0 auto;
-  }
+  // max-width , height and margin
+  @include section-container;
+  overflow: hidden;
   .history__title {
-    @include default_titleStyle(#FFF);
+    @include type-1(9em, $color-default-1);
     text-align: center;
     margin-bottom: 60px;
     @include device(smartphone) {
       margin-bottom: 20px;
+      @include type-1(3em, $color-default-1);
     }
   }
   .history__flex-wrapper {
@@ -47,7 +44,6 @@ $module-name: 'history';
       flex: 0 1 50%;
       max-width: 50%;
       padding: 0 20px;
-      @include default_textStyle(#FFF);
       @include device(smartphone) {
         flex: 0 1 100%;
         max-width: 100%;
@@ -60,7 +56,6 @@ $module-name: 'history';
       flex: 0 1 100%;
       max-width: 100%;
       padding: 0 20px;
-      @include default_textStyle(#FFF);
       p {
         margin: 20px 0;
       }
@@ -83,16 +78,17 @@ $module-name: 'history';
       }
     }
     .history__text-50, .history__text-100 {
+      @include type-1(1.5em, $color-default-1);
       @include device(desktopLarge) {
-        font-size: 1.125em;
+        @include type-1(1.125em, $color-default-1);
       }
       @include device(tablet) {
-        font-size: 1.125em;
+        @include type-1(1.125em, $color-default-1);
       }
       @include device(smartphone) {
+        @include type-1(.875em, $color-default-1);
         padding: 0px;
         margin: 10px 0 !important;
-        font-size: .875em;
         p {
           margin: 10px 0;
         }
