@@ -1,9 +1,17 @@
 /////////////////////////
 $dataAttribute: 'data-anim';
+$dataAttribute2: 'data-anim-2';
+
 
 [#{$dataAttribute}] {
   transition: transform 1.5s, opacity 2s;
   transform: translate3d(-120px,0,0) scale(.8);
+  opacity: 0;
+}
+
+[#{$dataAttribute2}] {
+  transition: transform 1.5s, opacity 2s;
+  transform: translate3d(120px,0,0) scale(.8);
   opacity: 0;
 }
 ///////////////////////////

@@ -4,7 +4,7 @@ export default class ScrollAnim {
   constructor(...elements) {
     this.elements = document.querySelectorAll(...elements);
 
-    this.windowMetade = window.innerHeight * 0.6;
+    this.windowMetade = window.innerHeight * 0.8;
   }
 
   getDistance() {
