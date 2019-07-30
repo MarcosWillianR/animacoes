@@ -3,14 +3,17 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
+const concat = require('gulp-concat');
+const babel = require('gulp-babel');
+const terser = require('gulp-terser');
 
 // Função para compilar o SASS e adicionar os prefixos
 function compilaSass() {
   return gulp.src('css/scss/**/*.scss')
-    .pipe(sass({ outputStyle: 'compressed'} ))
+    .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 2 versions'],
-      cascade: false
+      cascade: false,
     }))
     .pipe(gulp.dest('css/'))
     .pipe(browserSync.stream());
@@ -19,6 +22,19 @@ function compilaSass() {
 // Tarefa de gulp para função de SASS
 gulp.task('sass', compilaSass);
 
+// função para JS
+function gulpJS() {
+  return gulp.src(['js/helper/*.js', 'js/*.js'])
+    .pipe(concat('main.js'))
+    .pipe(babel({
+      presets: ['@babel/env'],
+    }))
+    .pipe(terser())
+    .pipe(gulp.dest('./'));
+}
+
+// Iniciar função de JS
+gulp.task('mainJS', gulpJS);
 
 // Função para iniciar o browser
 function browser() {
@@ -36,7 +52,7 @@ gulp.task('browser-sync', browser);
 // Função de watch do gulp
 function watch() {
   gulp.watch(['css/scss/**/*.scss'], compilaSass);
-  gulp.watch(['js/**/*.js']).on('change', browserSync.reload);
+  gulp.watch(['js/helper/*.js', 'js/*.js']).on('change', gulpJS);
   gulp.watch(['index.html']).on('change', browserSync.reload);
 }
 
@@ -44,4 +60,4 @@ function watch() {
 gulp.task('watch', watch);
 
 // Tarefa padrão do gulp, que inicia o watch e o browser-sync
-gulp.task('default', gulp.parallel('watch', 'browser-sync', 'sass'));
+gulp.task('default', gulp.parallel('watch', 'browser-sync', 'sass', 'mainJS'));
