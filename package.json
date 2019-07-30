@@ -1,23 +1,26 @@
 {
   "name": "animacoes",
-  "main": "gulpfile.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  },
   "dependencies": {
-    "@babel/runtime": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
-    "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-terser": "^1.2.0"
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6"
   },
   "keywords": [],
   "author": "",
