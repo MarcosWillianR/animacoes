@@ -36,6 +36,7 @@ gulp.task('browser-sync', browser);
 function watch() {
   gulp.watch(['css/scss/**/*.scss'], compilaSass);
   gulp.watch(['index.html']).on('change', browserSync.reload);
+  gulp.watch(['js/**/*.js']).on('change', browserSync.reload);
 }
 
 // Inicia a tarefa de watch
